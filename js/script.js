@@ -1,13 +1,18 @@
-const numberOfFilms = prompt('Сколько фильмов Вы уже посмотрели?', '');
-const lastMovie = prompt('Один из последний просмотренных фильмов?', '');
-const rateMovie = prompt('На сколько оцените его?', '');
+const numberOfFilms = prompt('Сколько фильмов Вы уже посмотрели?', ''); // Стоило сразу преобразовать в число
+// используя унарный знак +
 
 const personalMovieDB = {
     count: numberOfFilms,
     movies: {},
     actors: {},
-    genres: {},
+    genres: [],
     private: false
 };
 
-personalMovieDB.movies[lastMovie] = rateMovie;
+const lastMovieA = prompt('Один из последний просмотренных фильмов?', ''),
+        rateMovieA = prompt('На сколько оцените его?', ''),
+        lastMovieB = prompt('Один из последний просмотренных фильмов?', ''),
+        rateMovieB = prompt('На сколько оцените его?', '');
+
+personalMovieDB.movies[lastMovieA] = rateMovieA;
+personalMovieDB.movies[lastMovieB] = rateMovieB;
